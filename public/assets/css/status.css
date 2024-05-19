@@ -1,0 +1,244 @@
+/* --------------------------------- Fuentes -------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: Diether;
+    src: url(/assets/font/DietherMedium.otf);
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 700;
+    font-family: Diether;
+    src: url(/assets/font/DietherBold.otf);
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 900;
+    font-family: Diether;
+    src: url(/assets/font/DietherHeavy.otf);
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: 400;
+    font-family: Diether;
+    src: url(/assets/font/DietherItalicMedium.otf);
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: 700;
+    font-family: Diether;
+    src: url(/assets/font/DietherItalicBold.otf);
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: 900;
+    font-family: Diether;
+    src: url(/assets/font/DietherItalicHeavy.otf);
+}
+
+/* ------------------------------- Animaciones ------------------------------ */
+
+@keyframes scroll {
+    0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
+
+/* --------------------------------- Colores -------------------------------- */
+
+:root {
+    --col-bg-main: #F2F2F2;
+    --col-bg-secondary: #E3E3E3;
+    --col-bg-secondary-hover: #C9C9C9;
+    --col-fg-primary: #202124;
+    --col-fg-secondary: #979591;
+    --col-fg-border: #CCCCCC;
+    --col-fg-link: #84C7D0;
+    --col-btn-text: #2B2C30;
+    --col-btn-active: #00ABE7;
+
+    @media (prefers-color-scheme: dark) {
+        --col-bg-main: #0C0C0C;
+        --col-bg-secondary: #181818;
+        --col-bg-secondary-hover: #222222;
+        --col-fg-primary: #F4F7F8;
+        --col-fg-secondary: #737475;
+        --col-fg-border: #555555;
+        --col-btn-text: #d5d8e0;
+    }
+}
+
+/* ----------------------------- Estilos Basicos ---------------------------- */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+
+    &:focus-visible {
+        outline: 0;
+        outline: 2px solid #00abe7;
+    }
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--col-fg-primary);
+    background-color: var(--col-bg-main);
+    font-family: Inter, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--col-fg-link);
+
+    &:hover {
+        filter: brightness(80%);
+    }
+}
+
+/* ------------------------------- Background ------------------------------- */
+
+.background {
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    position: relative;
+    pointer-events: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    --move-final: calc(-50% + var(--offset));
+    --move-initial: calc(-25% + var(--offset));
+    --offset: 20vw;
+
+    .scroll {
+        gap: 12px;
+        rotate: -1.5deg;
+        display: flex;
+        position: relative;
+        width: fit-content;
+        animation: scroll 15s linear infinite;
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+
+    span {
+        opacity: 0.2;
+        font-size: 4rem;
+        font-weight: 700;
+        white-space: nowrap;
+        color: var(--col-fg-secondary);
+        font-family: Diether, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+
+/* --------------------------------- Botones -------------------------------- */
+
+button {
+    cursor: pointer;
+    appearance: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1.5px;
+    font-family: inherit;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: var(--col-btn-text);
+    border-color: var(--col-fg-border);
+    background-color: var(--col-bg-secondary);
+
+    &:hover {
+        padding: 8px 16px;
+        letter-spacing: 0.8px;
+        background-color: var(--col-bg-secondary-hover);
+    }
+
+    &:active {
+        scale: .95;
+    }
+}
+
+/* -------------------------------- Contenido ------------------------------- */
+main,
+about {
+    max-width: 95%;
+}
+
+main {
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    user-select: none;
+    position: absolute;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    @media screen and (width<=580px) {
+        flex-direction: column;
+        height: 60%;
+    }
+
+    .cat {
+        width: auto;
+        height: 300px;
+        margin-bottom: 10px;
+        color: var(--col-fg-secondary);
+    }
+
+    h2 {
+        font-size: 8rem;
+        font-weight: 900;
+        font-family: Diether, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .info {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        span {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--col-fg-secondary);
+        }
+    }
+}
+
+.about {
+    bottom: 30px;
+    display: flex;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--col-fg-secondary);
+}

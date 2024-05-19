@@ -1,0 +1,204 @@
+@font-face {
+	font-family: 'Inter';
+	src: url(../font/Inter.ttf);
+}
+
+@font-face {
+	font-family: 'Symbols NF';
+	src: url(../font/SymbolsNerdFont-Regular.ttf);
+}
+
+/* ------------------------------- Tema Claro ------------------------------- */
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--col-border: #ccc;
+		--col-bg-main: #f1f4f5;
+		--col-btn-hov: #dbdbdb;
+		--col-hov-bg: #1411120c;
+		--col-txt-main: #141112;
+		--col-link-def: #1e5d85;
+		--col-btn-glow: #ffffff5d;
+		--col-link-hover: #12374e;
+		--col-bg-secondary: #dee2e4;
+		--col-btn-hov-border: #b8b8b8;
+	}
+}
+
+/* ------------------------------- Tema Oscuro ------------------------------ */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--col-border: #303030;
+		--col-bg-main: #141618;
+		--col-btn-hov: #222327;
+		--col-txt-main: #e5e9e9;
+		--col-hov-bg: #e5e9e907;
+		--col-link-def: #84afff;
+		--col-btn-glow: #ffffff10;
+		--col-link-hover: #6a8dce;
+		--col-bg-secondary: #1c1d20;
+		--col-btn-hov-border: #686767;
+	}
+}
+
+/* ----------------------------- Estilos Basicos ---------------------------- */
+
+:root {
+	color: var(--col-txt-main);
+	-webkit-tap-highlight-color: #1411122d;
+	font-family: 'Inter', system-ui, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.2s ease;
+	color: var(--col-link-def);
+}
+
+a:hover {
+	text-decoration: underline;
+	color: var(--col-link-hover);
+}
+
+p,
+h1,
+span,
+svg {
+	transition: all 0.1s ease;
+}
+
+/* --------------------------------- Clases --------------------------------- */
+
+.separator {
+	width: 100%;
+	height: 2px;
+	opacity: 0.1;
+	margin: 12px 0;
+	border-radius: 2px;
+	box-sizing: border-box;
+	background-color: var(--col-txt-main);
+}
+
+.secondary {
+	opacity: 0.75;
+}
+
+.hidden {
+	display: none;
+}
+
+.nf-icon {
+	font-family: 'Symbols NF';
+}
+
+/* --------------------------- Contenido Principal -------------------------- */
+
+body {
+	gap: 14px;
+	padding: 22px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 0.1s ease;
+	background-color: var(--col-bg-main);
+}
+
+body img {
+	height: 60px;
+}
+
+.disclaimer-box {
+	gap: 40px;
+	width: 95%;
+	height: 350px;
+	padding: 28px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 800px;
+	border-radius: 8px;
+	overflow-y: scroll;
+	align-items: start;
+	flex-direction: row;
+	background-attachment: local;
+	transition: all 0.3s ease;
+	border: 1.5px solid var(--col-border);
+	background-image: url(../img/noise.png);
+	background-color: var(--col-bg-secondary);
+}
+
+button {
+	gap: 8px;
+	border: none;
+	display: flex;
+	cursor: pointer;
+	font-weight: 700;
+	overflow: hidden;
+	padding: 12px 18px;
+	border-radius: 6px;
+	position: relative;
+	align-items: center;
+	letter-spacing: 1px;
+	justify-content: center;
+	transition: all 0.2s ease;
+	text-transform: uppercase;
+	color: var(--col-txt-main);
+	border: solid 1.2px var(--col-border);
+	background-color: var(--col-bg-secondary);
+}
+
+button::after {
+	opacity: 0;
+	content: "";
+	width: 200%;
+	height: 200%;
+	top: var(--y);
+	left: var(--x);
+	position: absolute;
+	pointer-events: none;
+	transition: all 0.3s ease;
+	transform: translate(-50%, -50%);
+
+	@media (prefers-color-scheme: light) {
+		background-blend-mode: luminosity;
+		background-image: radial-gradient(circle, var(--col-btn-glow) 0%, rgba(255, 255, 255, 0) 65%) !important;
+	}
+
+	background-image: radial-gradient(circle, var(--col-btn-glow) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+@media (pointer: fine) {
+	button:hover::after {
+		opacity: 1;
+	}
+}
+
+button:hover {
+	border: solid 1px var(--col-btn-hov-border);
+	background-color: var(--col-btn-hov);
+}
+
+button .nf-icon {
+	font-size: 1.3em;
+}
