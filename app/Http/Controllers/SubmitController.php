@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
 use App\Lib\RandomString;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
 class SubmitController extends Controller
@@ -16,8 +18,10 @@ class SubmitController extends Controller
             $res = rand(0, $maxrand);
 
             if ($res != 1) {
+
                 return response('Solo se admiten peticiones POST (405)', 405);
             } else {
+
                 return view('noelia');
             }
         } elseif ($request->isMethod('post')) { // Peticion POST  
@@ -43,13 +47,29 @@ class SubmitController extends Controller
                     return response('El archivo supera el máximo permitido', 413);
                 } else {
 
-                    if ($this->isValidExtension($fileExtension)) {
+                    if ($this->isValidExtension($fileExtension)) { // Si es una extension valida
 
-                        $request->file('file')->storeAs('public', $newFileName);
+                        if ($this->needsSanitize($fileExtension)) { // Si el archivo requiere ser sanitizado
 
-                        $url = env('APP_URL') . ':8000' . '/file/' . $newFileName;
+                            $file = $request->file('file');
 
-                        return response($url, 200);
+                            $purifiedContent = file_get_contents($file->getPathname());
+                            $purifiedContent = htmlspecialchars($purifiedContent, ENT_QUOTES | ENT_HTML5);
+                            
+                            Storage::put('public/' . $newFileName, $purifiedContent);
+                            
+                            $url = env('APP_URL') . ':8000' . '/file/' . $newFileName;
+
+                            return response($url, 200);
+                        } else {
+
+                            $request->file('file')->storeAs('public', $newFileName);
+
+                            $url = env('APP_URL') . ':8000' . '/file/' . $newFileName;
+
+                            return response($url, 200);
+
+                        }
                     } else {
 
                         return response('Extension de archivo no permitida (400)', 400);
@@ -67,5 +87,13 @@ class SubmitController extends Controller
         $blacklist = ['jsp', 'exe', 'jar', 'scr', 'cpl', 'doc', 'docx', 'sh'];
 
         return !in_array($extension, $blacklist);
+    }
+
+    private function needsSanitize($extension)
+    {
+
+        $required = ['html', 'xhtml', 'php', 'phtml', 'cgi', 'xml', 'js'];
+
+        return in_array($extension, $required);
     }
 }
