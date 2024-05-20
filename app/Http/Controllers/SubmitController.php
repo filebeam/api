@@ -55,9 +55,9 @@ class SubmitController extends Controller
 
                             $purifiedContent = file_get_contents($file->getPathname());
                             $purifiedContent = htmlspecialchars($purifiedContent, ENT_QUOTES | ENT_HTML5);
-                            
+
                             Storage::put('public/' . $newFileName, $purifiedContent);
-                            
+
                             $url = env('APP_URL') . ':8000' . '/file/' . $newFileName;
 
                             return response($url, 200);
@@ -68,7 +68,6 @@ class SubmitController extends Controller
                             $url = env('APP_URL') . ':8000' . '/file/' . $newFileName;
 
                             return response($url, 200);
-
                         }
                     } else {
 
