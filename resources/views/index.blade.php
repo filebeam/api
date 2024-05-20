@@ -43,14 +43,13 @@
 		</button>
 	</form>
 	<div class="disclaimer">
-		<p class="secondary">¡FileBeam tendrá un nuevo aspecto, esperalo pronto!</p>
+		<p class="secondary">Novedades: mejoras internas (API)</p>
 		<p class="secondary">Al usar este sitio web, aceptas haber leido el <a href="/disclaimer">disclaimer</a></p>
-		<p class="secondary">FILEBEAM v1.0.0</p>
+		<p class="secondary">FILEBEAM v1.1.0</p>
 	</div>
 
 	<script src="index.js"></script>
 	<script src="validator.js"></script>
-
 
 </body>
 
