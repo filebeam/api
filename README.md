@@ -20,7 +20,7 @@
   </div>
 </div>
       
-> [!NOTE]
+> [!NOTA]
 > Este repositorio es para el futuro de la API de Filebeam que está siendo migrada de PHP puro al framework Laravel. Si deseas ver la versión actual de la API, puedes encontrarla dando click [aqui](https://github.com/xXJorge603Xx/filebeam-laravel)
 
 # Acerca de
