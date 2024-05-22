@@ -21,7 +21,7 @@
 </div>
       
 > [!NOTE]
-> Este repositorio es el futuro de la API, trasladando todas las funciones al framework Laravel. Si deseas ver la versión actual de la API, puedes encontrarla dando click [aqui](https://github.com/xXJorge603Xx/filebeam-laravel)
+> Este repositorio es el futuro de la API, trasladando todas las funciones al framework Laravel. Si deseas ver la versión actual de la API, puedes encontrarla dando click [aqui](https://github.com/xXJorge603Xx/filebeam)
 
 ## Ejecutar de manera local
 
