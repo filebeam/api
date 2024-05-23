@@ -52,7 +52,6 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
    ```sh
    php artisan migrate
    ``` 
-
 5. Inicia el servidor de desarollo
    ```sh
    php artisan serve
