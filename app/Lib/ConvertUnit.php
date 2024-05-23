@@ -2,15 +2,18 @@
 
 namespace App\Lib;
 
-class ConvertUnit {
+class ConvertUnit
+{
 
-    function byteToMB($byte){ // De Byte a MegaByte
-        $megabyte = $byte / 1048576; // Formula de conversion: Byte / 1,048,576
+    function byteToMB($byte)
+    { 
+        $megabyte = $byte / 1048576;
         return $megabyte;
     }
 
-    function megabyteToByte($megabyte){ // De MegaByte a Byte
-        $byte = $megabyte * 1048576; // Formula de conversion: MByte * 1,048,576
+    function megabyteToByte($megabyte)
+    { 
+        $byte = $megabyte * 1048576;
         return $byte;
     }
 
