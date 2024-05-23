@@ -10,7 +10,6 @@ class SubmitController extends Controller
 {
     public function submit(Request $request)
     {
-
         $fileExtension = $request->file('file')->getClientOriginalExtension();
         $newFileName = new RandomString();
         $newFileName = $newFileName->randomize(6) . '.' . $fileExtension;
@@ -31,9 +30,7 @@ class SubmitController extends Controller
 
         $request->file('file')->storeAs('public', $newFileName);
         $url = env('APP_URL') . ':8000' . '/file/' . $newFileName;
-        return response($url, 200);
-
-            
+        return response($url, 200);     
     }
 
 }
