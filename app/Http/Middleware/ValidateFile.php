@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
+use App\Lib\ConvertUnit;
 
 class ValidateFile
 {
@@ -25,9 +26,12 @@ class ValidateFile
             return response('No se ha enviado ningun archivo', 400);
         } 
 
-        if ($request->file('file')->getSize() > 100000000) { // TO-DO: Mejorar esta validacion
+        $fileSize = new ConvertUnit();
+        $fileSize = $fileSize->byteToMB($request->file('file')->getSize());
+
+        if ($fileSize > 100) {
             return response('El archivo supera el máximo permitido', 413);
-        } 
+        }
 
         $extension = $request->file('file')->getClientOriginalExtension(); 
 
