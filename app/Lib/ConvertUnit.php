@@ -4,7 +4,6 @@ namespace App\Lib;
 
 class ConvertUnit
 {
-
     function byteToMB($byte)
     { 
         $megabyte = $byte / 1048576;
@@ -18,5 +17,4 @@ class ConvertUnit
     }
 
     // Añadir mas metodos de conversion cuando sean necesarios
-
 }
