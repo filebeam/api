@@ -44,7 +44,16 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
    ```sh
    composer install
    ```
-3. Inicia el servidor de desarollo
+3. Renombra el archivo .env.example a .env (Recuerda añadir los datos de la base de datos en el .env)
+   ```sh
+   cp .env.example .env & vim .env
+   ```
+4. Ejecuta las migraciones
+   ```sh
+   php artisan migrate
+   ``` 
+
+5. Inicia el servidor de desarollo
    ```sh
    php artisan serve
    ```
