@@ -29,7 +29,7 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
 
 ### Requisitos Previos
 
-* **Algun editor de texto** *(Vim/NeoVim Recomendado)*
+* **Algun editor de texto**
 * **PHP (version 8.2 o posterior)**
 * **Composer**
 * **Sentido Comun**
@@ -46,7 +46,7 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
    ```
 3. Renombra el archivo .env.example a .env (Recuerda añadir los datos de la base de datos en el .env)
    ```sh
-   cp .env.example .env & vim .env
+   cp .env.example .env
    ```
 4. Ejecuta las migraciones
    ```sh
