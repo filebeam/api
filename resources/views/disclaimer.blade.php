@@ -21,7 +21,7 @@
 
 				Estos Términos y Condiciones ("Términos") rigen el uso del servicio de alojamiento,
 				acceso y compartición de archivos mediante enlaces directos (en adelante, el "Servicio")
-				proporcionado por FILES (en adelante, el "Webmaster"). Al acceder o utilizar el Servicio,
+				proporcionado por FILES (en adelante, el "Administrador"). Al acceder o utilizar el Servicio,
 				usted acepta estar legalmente vinculado por estos Términos. Si no está de acuerdo con estos
 				Términos, no debe utilizar el Servicio. <br><br>
 
@@ -33,13 +33,13 @@
 
 				1.2 Contenido del Usuario: Usted es el único responsable del contenido que carga,
 				almacena o comparte a través del Servicio ("Su Contenido").
-				El Webmaster no se hace responsable por Su Contenido y se reserva el derecho de
+				El Administrador no se hace responsable por Su Contenido y se reserva el derecho de
 				eliminar o bloquear cualquier contenido que viole estos Términos o las leyes aplicables.
 				<br><br>
 
 				1.3 Enlaces Directos: El Servicio le permite generar enlaces directos para acceder
 				y compartir Su Contenido. Usted acepta que es responsable de mantener la seguridad de
-				estos enlaces y que El Webmaster no es responsable de cualquier acceso no autorizado
+				estos enlaces y que El Administrador no es responsable de cualquier acceso no autorizado
 				a Su Contenido a través de estos enlaces.
 				<br><br>
 
@@ -50,55 +50,55 @@
 
 				2. PERMISOS Y LICENCIA <br><br>
 
-				2.1 Licencia de Uso: Al cargar Su Contenido en el Servicio, usted otorga a El Webmaster
+				2.1 Licencia de Uso: Al cargar Su Contenido en el Servicio, usted otorga a El Administrador
 				una licencia mundial, no exclusiva, libre de regalías para usar, almacenar, copiar,
 				transmitir, distribuir, modificar y poner a disposición Su Contenido con el único propósito
 				de proporcionar y mejorar el Servicio.
 				<br><br>
 
-				2.2 Privacidad: El Webmaster se compromete a proteger su privacidad de acuerdo con su Política
+				2.2 Privacidad: El Administrador se compromete a proteger su privacidad de acuerdo con su Política
 				de Privacidad. Sin embargo, usted acepta que Su Contenido podrá ser accesible a terceros
 				con quienes comparta enlaces directos.
 				<br><br>
 
 				3. ELIMINACIÓN DE CONTENIDO <br><br>
 
-				3.1 Deduplicación: El Webmaster puede eliminar automática o manualmente archivos que considere
+				3.1 Deduplicación: El Administrador puede eliminar automática o manualmente archivos que considere
 				duplicados de acuerdo con su proceso de deduplicación.
 				<br><br>
 
-				3.2 Contenido Malicioso: El Webmaster puede eliminar automáticamente archivos que
+				3.2 Contenido Malicioso: El Administrador puede eliminar automáticamente archivos que
 				considere que contienen contenido malicioso, como malware, virus o spyware.
 				<br><br>
 
 				4. DERECHOS DE PROPIEDAD INTELECTUAL <br><br>
 
-				4.1 Propiedad de Su Contenido: Usted conserva la propiedad de Su Contenido. El Webmaster
+				4.1 Propiedad de Su Contenido: Usted conserva la propiedad de Su Contenido. El Administrador
 				no reclama ningún derecho de propiedad sobre Su Contenido.
 				<br><br>
 
 				5. RESPONSABILIDAD Y GARANTÍAS <br><br>
 
 				5.1 Sin Garantías: El Servicio se proporciona "tal cual" y "según disponibilidad".
-				El Webmaster no ofrece garantías de ningún tipo, ya sea expresas o implícitas, incluyendo,
+				El Administrdor no ofrece garantías de ningún tipo, ya sea expresas o implícitas, incluyendo,
 				pero no limitado a, garantías de comerciabilidad, idoneidad para un propósito
 				particular y no infracción.
 				<br><br>
 
-				5.2 Limitación de Responsabilidad: En la medida permitida por la ley, El Webmaster
+				5.2 Limitación de Responsabilidad: En la medida permitida por la ley, El Administrador
 				no será responsable por daños indirectos, incidentales, especiales o consecuentes que
 				surjan del uso o la imposibilidad de usar el Servicio.
 				<br><br>
 
 				6. TERMINACIÓN <br><br>
 
-				El Webmaster se reserva el derecho de terminar o suspender su acceso al Servicio en
+				El Administrador se reserva el derecho de terminar o suspender su acceso al Servicio en
 				cualquier momento, con o sin causa, y sin previo aviso.
 				<br><br>
 
 				7. CAMBIOS EN LOS TÉRMINOS <br><br>
 
-				El Webmaster se reserva el derecho de modificar estos Términos en cualquier momento.
+				El Administrador se reserva el derecho de modificar estos Términos en cualquier momento.
 				Los cambios suelen ser sin previo aviso y usted acepta la responsabilidad de revisar
 				periódicamente estos Términos. <br><br>
 
