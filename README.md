@@ -29,7 +29,7 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
 
 ### Requisitos Previos
 
-* **Algun editor de texto** *(VSCode Recomendado)*
+* **Algun editor de texto** *(NeoVim Recomendado)*
 * **PHP (version 8.2 o posterior)**
 * **Composer**
 * **Sentido Comun**
