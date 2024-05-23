@@ -17,7 +17,6 @@ class ValidateFile
 
     public function handle(Request $request, Closure $next): Response
     {
-
         if (!$request->isMethod('POST')) { 
             return response('Solo se admiten peticiones POST', 405);
         } 
@@ -36,7 +35,7 @@ class ValidateFile
         $extension = $request->file('file')->getClientOriginalExtension(); 
 
         if (!$this->isValidExtension($extension)) { 
-            return response('No se admite este tipo de archivos', 400);
+            return response('Tipo de archivo no admitido', 400);
         }
 
         if($this->needsSanitize($extension)){ 
@@ -45,19 +44,16 @@ class ValidateFile
         }
 
         return $next($request);
-
     }
 
     private function isValidExtension($extension)
     {
-
         $blacklist = ['jsp', 'exe', 'jar', 'scr', 'cpl', 'doc', 'docx', 'sh'];
         return !in_array($extension, $blacklist);
     }
 
     private function needsSanitize($extension)
     {
-
         $required = ['html', 'xhtml', 'php', 'phtml', 'cgi', 'xml', 'js'];
         return in_array($extension, $required);
     }
