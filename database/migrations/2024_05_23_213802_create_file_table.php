@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('announcements', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('date');
-            $table->string('title');
-            $table->longText('content');
-            $table->string('img_url')->nullable();
+        Schema::create('file', function (Blueprint $table) {
+            $table->increments('file_id');
+            $table->string('file_name');
+            $table->bigInteger('sent_time');
+            $table->bigInteger('expire_time');
         });
     }
 
@@ -25,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('announcements');
+        Schema::dropIfExists('file');
     }
 };
