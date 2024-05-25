@@ -7,7 +7,7 @@ function uploadFile(event) {
     uploadBtn.disabled = true;
 
     $.ajax({
-        url: 'http://127.0.0.1:8000/api', // URL del script de servidor que maneja la carga del archivo
+        url: '/api', // URL del script de servidor que maneja la carga del archivo
         type: 'POST',
         data: formData,
         processData: false,
