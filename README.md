@@ -80,3 +80,5 @@ Si deseaas reportar algun error, o tienes alguna sugerencia, puedes abrir un iss
 
 ## Licencia
 
+Mira el archivo de [licencia](https://github.com/xXJorge603Xx/filebeam-laravel/blob/main/LICENSE) para ver los derechos y limitaciones de la misma
+
