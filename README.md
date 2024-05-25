@@ -59,7 +59,7 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
 
 # ¿Porque FileBeam?
 
-FileBeam es un servicio que te permite compartir archivos facil y rapidamente a traves de enlaces directos, ademas, FileBeam es completamente codigo abierto, por lo que puedes hacer lo que desees con el, FileBeam provee una alternativa directa a sitios como catbox.moe para aquellos que deseen una segunda opcion.
+FileBeam es un servicio que te permite compartir archivos facil y rapidamente a traves de enlaces directos, ademas, FileBeam es completamente codigo abierto, por lo que puedes hacer lo que desees con el siempre y cuando sigas los parámetros de la licencia GNU GPL-v3.0, FileBeam provee una alternativa directa a sitios como catbox.moe para aquellos que deseen una segunda opcion.
 
 ## Roadmap
 
