@@ -6,9 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="assets/css/index.css">
-	<meta property="og:title" content="FILES (BETA)">
+	<meta property="og:title" content="FileBeam">
     <meta property="og:description" content="Comparte archivos rapidamente mediante enlaces directos">
-    <meta property="og:url" content="files.jorge603.xyz">
+    <meta property="og:url" content="filebeam.xyz">
     <meta property="og:type" content="website">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
