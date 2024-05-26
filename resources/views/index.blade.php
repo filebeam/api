@@ -45,7 +45,7 @@
 	<div class="disclaimer">
 		<p class="secondary">Ahora el limite de subida es de 150 MB</p>
 		<p class="secondary">Al usar este sitio web, aceptas haber leido el <a href="/disclaimer">disclaimer</a></p>
-		<p class="secondary">FILEBEAM v1.1.0</p>
+		<p class="secondary">FILEBEAM v1.1.1</p>
 	</div>
 
 	<script src="index.js"></script>
