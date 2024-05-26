@@ -26,8 +26,8 @@ class ValidateFile
             return response('No se ha enviado ningun archivo', 400);
         } 
 
-        $filehash = hash_file('sha256', $request->file('file'));
-        $isFileBlackListed = DB::select('select * from niggalist where hash = :hash', ['hash' => $filehash]);
+        $fileHash = hash_file('sha256', $request->file('file'));
+        $isFileBlackListed = DB::select('select * from niggalist where hash = :hash', ['hash' => $fileHash]);
 
         if($isFileBlackListed){
             return response('No se admita la subida de este archivo', 403);
