@@ -45,11 +45,16 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
    ```sh
    cp .env.example .env
    ```
-4. Ejecuta las migraciones
+5. Genera una API Key:
+   ```sh
+   php artisan key:generate
+   ```
+   
+6. Ejecuta las migraciones
    ```sh
    php artisan migrate
    ``` 
-5. Inicia el servidor de desarollo
+7. Inicia el servidor de desarollo
    ```sh
    php artisan serve
    ```
