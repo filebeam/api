@@ -6,6 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Lib\ConvertUnit;
+use Illuminate\Support\Facades\DB;
 
 class ValidateFile
 {
@@ -24,6 +25,13 @@ class ValidateFile
         if (!$request->file('file')) { 
             return response('No se ha enviado ningun archivo', 400);
         } 
+
+        $filehash = hash_file('sha256', $request->file('file'));
+        $isFileBlackListed = DB::select('select * from niggalist where hash = :hash', ['hash' => $filehash]);
+
+        if($isFileBlackListed){
+            return response('No se admita la subida de este archivo', 403);
+        }
 
         $fileSize = new ConvertUnit();
         $fileSize = $fileSize->byteToMB($request->file('file')->getSize());
