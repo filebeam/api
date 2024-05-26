@@ -147,7 +147,7 @@ window.addEventListener('focus', function () {
 fileInput.addEventListener('change', function () {
 	if (fileInput.files.length > 0) {
 		var fileSize = fileInput.files[0].size;
-		if (fileSize <= 104857600) { // Limite de tamaño de 100MB
+		if (fileSize <= 157286400) { // Limite de tamaño de 150MB
 			dragDropArea.querySelector('span').textContent = fileInput.files[0].name;
 			fileIcon.classList.remove('hidden');
 			uploadIcon.classList.add('hidden');
@@ -155,7 +155,7 @@ fileInput.addEventListener('change', function () {
 			uploadBtn.disabled = false;
 		}
 	} else {
-		dragDropArea.querySelector('span').textContent = 'El archivo excede el límite de tamaño (100MB).';
+		dragDropArea.querySelector('span').textContent = 'El archivo excede el límite de tamaño (150MB).';
 		fileInput.value = ''; // Limpia el archivo seleccionado
 		uploadIcon.classList.remove('hidden');
 		fileIcon.classList.add('hidden');

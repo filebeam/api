@@ -29,7 +29,7 @@
 					d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128z" />
 			</svg>
 			<span class="secondary">Arrastre y suelte un archivo aquí o haga clic para seleccionar</span>
-			<span class="secondary"><strong>Tamaño maximo permitido: 100MB</strong></span>
+			<span class="secondary"><strong>Tamaño maximo permitido: 150MB</strong></span>
 			<input type="file" id="fileInput" name="file"/>
 		</div>
 		<div id="output">
@@ -43,7 +43,7 @@
 		</button>
 	</form>
 	<div class="disclaimer">
-		<p class="secondary">Novedades: Nos hemos migrado a Laravel</p>
+		<p class="secondary">Ahora el limite de subida es de 150 MB</p>
 		<p class="secondary">Al usar este sitio web, aceptas haber leido el <a href="/disclaimer">disclaimer</a></p>
 		<p class="secondary">FILEBEAM v1.1.0</p>
 	</div>
