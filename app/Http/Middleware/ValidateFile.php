@@ -51,7 +51,7 @@ class ValidateFile
             return $next($request); 
         }
 
-        return $next($request);
+        return $next($request); // FIn de la funcion
     }
 
     private function isValidExtension($extension)
