@@ -30,7 +30,7 @@ class ValidateFile
         $isFileBlackListed = DB::select('select * from niggalist where hash = :hash', ['hash' => $fileHash]);
 
         if($isFileBlackListed){
-            return response('No se admita la subida de este archivo', 403);
+            return response('Este archivo ha sido bloqueado', 403);
         }
 
         $fileSize = new ConvertUnit();
