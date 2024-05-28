@@ -18,7 +18,7 @@ class ValidateFile
 
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$request->isMethod('POST')) { 
+        if (!$request->isMethod('POST')) { // Peticiones POST
             return response('Solo se admiten peticiones POST', 405);
         } 
 
