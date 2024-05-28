@@ -35,7 +35,7 @@ Para configurar rapidamente una version local de la pagina de FileBeam puedes se
 
 1. Clona el repositorio en alguna ruta accesible
    ```sh
-   git clone https://github.com/xXJorge603Xx/filebeam-laravel.git
+   git clone https://github.com/filebeam/api.git
    ```
 2. Instala las dependencias con Composer
    ```sh
@@ -82,5 +82,5 @@ Si deseaas reportar algun error, o tienes alguna sugerencia, puedes abrir un iss
 
 ## Licencia
 
-FileBeam es software de código abierto bajo la licencia [GNU GPL-v3.0](https://github.com/xXJorge603Xx/filebeam-laravel/blob/main/LICENSE).
+FileBeam es software de código abierto bajo la licencia [GNU GPL-v3.0](https://github.com/filebeam/api/blob/main/LICENSE).
 
