@@ -20,6 +20,7 @@ Route::any('/api', [SubmitController::class, 'submit'])->middleware(ValidateFile
 # Ruta /api/anuncios, controlado por AnunciosController y a su vez respaldado por el middleware AnnouncementRequests
 Route::any('/api/anuncios', [AnunciosController::class, 'getContent'])->middleware(AnnouncementRequests::class);
 
+# Ruta /github, solo redirige al github de filebeam
 Route::get('/github', function(){
     return redirect()->away('https://github.com/filebeam');
 });
