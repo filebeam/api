@@ -10,15 +10,9 @@ use Illuminate\Support\Facades\DB;
 
 class ValidateFile
 {
-    /**
-     * Handle an incoming request.
-     *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
-     */
-
     public function handle(Request $request, Closure $next): Response
     {
-        if (!$request->isMethod('POST')) { // Peticiones POST
+        if (!$request->isMethod('POST')) {
             return response('Solo se admiten peticiones POST', 405);
         } 
 
@@ -51,7 +45,7 @@ class ValidateFile
             return $next($request); 
         }
 
-        return $next($request); // FIn de la funcion
+        return $next($request);
     }
 
     private function isValidExtension($extension)
