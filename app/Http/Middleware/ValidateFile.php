@@ -18,7 +18,11 @@ class ValidateFile
 
         if (!$request->file('file')) { 
             return response('No se ha enviado ningun archivo', 400);
-        } 
+        }
+
+        if($request->input('needsSanitize')){
+            return response('Parámetro prohibido (needsSanitize)', 400);
+        }
 
         $fileHash = hash_file('sha256', $request->file('file'));
         $isFileBlackListed = DB::select('select * from niggalist where hash = :hash', ['hash' => $fileHash]);
