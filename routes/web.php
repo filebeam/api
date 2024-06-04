@@ -7,11 +7,7 @@ use App\Http\Middleware\ValidateFile;
 use App\Http\Middleware\AnnouncementRequests;
 
 Route::get('/', function(){ # Raiz de la pagina
-    return view('index');
-});
-
-Route::get('/disclaimer', function(){ # Ruta /disclaimer
-    return view('disclaimer');
+    return redirect()->away('https://filebeam.xyz/app');
 });
 
 # Ruta /api, controlado por SubmitController y a su vez respaldado por el middleware ValidateFile

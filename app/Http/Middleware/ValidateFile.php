@@ -34,7 +34,7 @@ class ValidateFile
         $fileSize = new ConvertUnit();
         $fileSize = $fileSize->byteToMB($request->file('file')->getSize());
 
-        if ($fileSize > 150) {
+        if ($fileSize > 200) {
             return response('El archivo supera el máximo permitido', 413);
         }
 
