@@ -9,7 +9,6 @@
 <strong>📝 Repositorio para la pagina de FileBeam</strong>
 </p>
 <p>
-<strong>🚀 ¡Ahora en Laravel!</strong>
 </p>
   <div>
   <strong>
