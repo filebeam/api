@@ -30,13 +30,7 @@ function submit($needSanitize, $time)
        file_put_contents($uploadFileDir . $newFileName, $sanitiziedContent);
     }
 
-    $port = $_SERVER['SERVER_PORT'];
-
-    if($port === 443){
-        $fileUrl = "https://$uri/file/" . $newFileName;
-    } else {
-        $fileUrl = "http://$uri/file/" . $newFileName;
-    }
+    $fileUrl = "https://$uri/file/" . $newFileName;
 
     echo $fileUrl;
 }
