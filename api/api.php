@@ -38,7 +38,6 @@ if (needsSanitize($fileExtension)) {
     return;
 }
 
-
 submit(false, 0);
 
 # Funciones de validación
