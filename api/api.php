@@ -1,5 +1,6 @@
 <?php
 require "../config/config.php";
+require "../config/connection.php";
 require "../lib/ConvertUnit.php";
 require "submit.php";
 
@@ -29,6 +30,17 @@ $fileExtension = strtolower(end($fileNameCmps));
 
 if (!isValidExtension($fileExtension)) {
     echo "Tipo de archivo no admitido";
+    http_response_code(400);
+    return;
+}
+
+$fileHash = hash_file('sha256', $_FILES['file']['tmp_name']);
+$stmt = $conn->prepare("SELECT * FROM blacklist WHERE hash = :hash");
+$stmt->bindParam(":hash", $fileHash);
+$stmt->execute();
+
+if($stmt->rowCount() != 0){
+    echo "Archivo bloqueado";
     http_response_code(400);
     return;
 }
