@@ -5,13 +5,13 @@ require "../lib/ConvertUnit.php";
 require "submit.php";
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-    echo "Solo se admiten peticiones POST";
+    echo "Solo se admiten peticiones POST \n";
     http_response_code(405);
     return;
 }
 
 if (!isset($_FILES['file']) || $_FILES['file']['name'] === "") {
-    echo "No se ha enviado ningun archivo";
+    echo "No se ha enviado ningun archivo \n";
     http_response_code(400);
     return;
 }
@@ -19,7 +19,7 @@ if (!isset($_FILES['file']) || $_FILES['file']['name'] === "") {
 $fileSize = byteToMB($_FILES['file']['size']);
 
 if ($fileSize >= 200) {
-    echo "El archivo ha excedido el máximo permitido";
+    echo "El archivo ha excedido el máximo permitido \n";
     http_response_code(413);
     return;
 }
@@ -29,7 +29,7 @@ $fileNameCmps = explode('.', $fileName);
 $fileExtension = strtolower(end($fileNameCmps));
 
 if (!isValidExtension($fileExtension)) {
-    echo "Tipo de archivo no admitido";
+    echo "Tipo de archivo no admitido \n";
     http_response_code(400);
     return;
 }
@@ -40,7 +40,7 @@ $stmt->bindParam(":hash", $fileHash);
 $stmt->execute();
 
 if($stmt->rowCount() != 0){
-    echo "Archivo bloqueado";
+    echo "Archivo bloqueado \n";
     http_response_code(400);
     return;
 }

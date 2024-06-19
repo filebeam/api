@@ -30,7 +30,7 @@ function submit($needSanitize, $time)
        file_put_contents($uploadFileDir . $newFileName, $sanitiziedContent);
     }
 
-    $fileUrl = "https://$uri/file/" . $newFileName;
+    $fileUrl = "https://$uri/file/" . $newFileName . "\n";
 
     echo $fileUrl;
 }
