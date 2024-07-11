@@ -6,7 +6,7 @@
 </a>
 <br/>
 <p align="center">
-<strong>📝 Repositorio para la pagina de FileBeam</strong>
+<strong>📝 Repositorio para la API de FileBeam</strong>
 </p>
 <p>
 </p>
