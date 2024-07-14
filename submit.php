@@ -2,8 +2,8 @@
 
 function submit($needSanitize, $time)
 {
-    require "../config/config.php";
-    require "../lib/rename.php";
+    require "config/config.php";
+    require "lib/rename.php";
 
     # Obtiene datos del archivo subido
     $fileTmpPath = $_FILES['file']['tmp_name'];

@@ -1,8 +1,14 @@
 <?php
-require "../config/config.php";
-require "../config/connection.php";
-require "../lib/ConvertUnit.php";
+require "config/config.php";
+require "config/connection.php";
+require "lib/ConvertUnit.php";
 require "submit.php";
+
+if ($maintenance) {
+    echo "Servicio no disponible temporalmente";
+    http_response_code(503);
+    return;
+}
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     echo "Solo se admiten peticiones POST \n";
