@@ -4,6 +4,8 @@ function submit($needSanitize, $time)
 {
     require "config/config.php";
     require "lib/rename.php";
+    require "log.php";
+    require "lib/time.php";
 
     # Obtiene datos del archivo subido
     $fileTmpPath = $_FILES['file']['tmp_name'];
@@ -20,6 +22,10 @@ function submit($needSanitize, $time)
         $newFileName = randomize(6) . "." . $fileExtension;
     }
 
+    if (!file_exists($uploadFileDir)) {
+        mkdir($uploadFileDir);
+    }
+
     # Mueve el archivo subido al directorio final (file/)
     move_uploaded_file($fileTmpPath, $uploadFileDir . $newFileName);
 
@@ -30,7 +36,14 @@ function submit($needSanitize, $time)
        file_put_contents($uploadFileDir . $newFileName, $sanitiziedContent);
     }
 
-    $fileUrl = "https://$uri/file/" . $newFileName . "\n";
+    if($_SERVER['SERVER_PORT'] != 443){
+        $fileUrl = "http://$uri/file/" . $newFileName . "\n";
+    } else {
+        $fileUrl = "https://$uri/file/" . $newFileName . "\n";
+    }
 
+    $timestamp = getTimestamp();
+    $dateTime = getDateTime();
+    log_upload($newFileName, $timestamp, $dateTime);
     echo $fileUrl;
 }
