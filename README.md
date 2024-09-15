@@ -6,9 +6,10 @@
 </a>
 <br/>
 <p align="center">
-<strong>📝 Repositorio para la API de FileBeam</strong>
+<strong>📝 Repositorio para la pagina de FileBeam</strong>
 </p>
 <p>
+<strong>🚀 ¡Ahora en Laravel!</strong>
 </p>
   <div>
   <strong>
@@ -21,7 +22,37 @@
 
 ## Ejecutar de manera local
 
-Pendiente por redactar
+Para configurar rapidamente una version local de la pagina de FileBeam puedes seguir los siguientes pasos
+
+### Requisitos Previos
+
+* **Algun editor de texto**
+* **PHP (version 8.2 o posterior)**
+* **Composer**
+* **Sentido Comun**
+
+### Instalacion
+
+1. Clona el repositorio en alguna ruta accesible
+   ```sh
+   git clone https://github.com/xXJorge603Xx/filebeam-laravel.git
+   ```
+2. Instala las dependencias con Composer
+   ```sh
+   composer install
+   ```
+3. Renombra el archivo .env.example a .env (Recuerda añadir los datos de la base de datos en el .env)
+   ```sh
+   cp .env.example .env
+   ```
+4. Ejecuta las migraciones
+   ```sh
+   php artisan migrate
+   ``` 
+5. Inicia el servidor de desarollo
+   ```sh
+   php artisan serve
+   ```
 
 # ¿Porque FileBeam?
 
@@ -46,4 +77,4 @@ Si deseaas reportar algun error, o tienes alguna sugerencia, puedes abrir un iss
 
 ## Licencia
 
-FileBeam es software de código abierto bajo la licencia [GNU GPL-v3.0](https://github.com/filebeam/api/blob/main/LICENSE).
+FileBeam es software de código abierto bajo la licencia [GNU GPL-v3.0](https://github.com/xXJorge603Xx/filebeam-laravel/blob/main/LICENSE).
