@@ -1,7 +1,7 @@
 <?php 
 
-include 'config/config.php';
-include 'config/connection.php';
+include __DIR__ . '/config/config.php';
+include __DIR__ . '/config/connection.php';
 
 $timestamp = new DateTime();
 $current_timestamp = $timestamp->getTimestamp();
