@@ -6,7 +6,7 @@ function sanitize($uri, $type){
     if ($type == "dev") {
         $uri = str_replace("//", "", $uri); # Ajuste de la URI para evitar problemas con la generacion de URL. 
     } else {
-        $uri = str_replace("/api/", "", $uri);
+        $uri = str_replace("/api/", "/", $uri);
     }
     $uri = strtok($uri, '?'); # Mas ajustes a la URI
 
