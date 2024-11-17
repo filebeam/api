@@ -32,12 +32,6 @@ if (!isset($_POST['time'])) {
     $time = htmlspecialchars($_POST['time']);
 }
 
-if (!is_numeric($time)) {
-    echo "El valor de tiempo debe ser numerico \n";
-    http_response_code(400);
-    return;
-}
-
 if ($time == 0 && $fileSize >= 200) {
     echo "El archivo ha excedido el máximo permitido \n";
     http_response_code(413);
@@ -72,11 +66,11 @@ if($stmt->rowCount() != 0){
 }
 
 if (needsSanitize($fileExtension)) {
-    submit(true, $time);
+    submit(true, $time, $fileHash);
     return;
 }
 
-submit(false, $time);
+submit(false, $time, $fileHash);
 
 # Funciones de validación
 function isValidExtension($extension)
