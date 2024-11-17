@@ -1,8 +1,6 @@
 <?php
 
-function sanitize($uri){
-
-    include "config.php";
+function sanitize($uri, $type){
 
     $uri = htmlspecialchars($uri, ENT_QUOTES, 'UTF-8'); # Sanitizado de la URI
     if ($type == "dev") {
