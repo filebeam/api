@@ -8,3 +8,5 @@ require_once __DIR__.'/router.php';
 any('/','validator.php');
 
 get('/anuncios', 'announcements.php');
+
+get('/totalFiles', 'stats.php');
