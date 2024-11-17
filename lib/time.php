@@ -2,10 +2,10 @@
 
 # Forma mas organizada para obtener el tiempo en todo el proyecto
 
-function getTimestamp(){
+function getUnixTime(){
     $timestamp = new DateTime();
-    $timestamp = $timestamp->getTimestamp(); # Obtiene el timestamp actual (Unix)
-    return $timestamp;
+    $output = $timestamp->getTimestamp(); # Obtiene el timestamp actual (Unix)
+    return $output;
 }
 
 function getDateTime(){
