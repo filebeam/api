@@ -15,7 +15,7 @@ echo "Tiempo actual (timestamp): " . $current_timestamp . "<br>";
 foreach ($files as $file){
     if($file['expire_time'] <= $current_timestamp){
         echo "Eliminando archivo temporal expirado...";
-        $target_dir = $uploadFileDir . $file['file_name'];
+        $target_dir = __DIR__ . "/" . $uploadFileDir . $file['file_name'];
         unlink($target_dir);
         $conn->prepare("DELETE FROM tmp_files WHERE id_file = :id_file")
         ->execute([":id_file" => $file['id_file']]);
@@ -25,5 +25,7 @@ foreach ($files as $file){
         echo "El archivo " . $file['file_name'] . " aún se encuentra vigente. Expira en " . $file['expire_time']-$current_timestamp . " segundos <br>";
     }
 }
+
+
 
 echo "¡Comprobación completada!";
