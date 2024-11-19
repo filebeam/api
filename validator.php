@@ -4,6 +4,14 @@ require "config/connection.php";
 require "lib/ConvertUnit.php";
 require "submit.php";
 
+# Encabezados CORS
+
+header("Access-Control-Allow-Origin: *"); 
+
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE"); 
+
+header("Access-Control-Allow-Headers: Content-Type, Authorization"); 
+
 # Validaciones de cualquier archivo
 
 if ($maintenance) {
