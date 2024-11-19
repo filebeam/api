@@ -1,15 +1,15 @@
 <?php
 
 function byteToMB($byte)
-    { 
-        $megabyte = $byte / 1048576;
-        return $megabyte;
-    }
+{
+    $megabyte = $byte / 1048576;
+    return $megabyte;
+}
 
-    function megabyteToByte($megabyte)
-    { 
-        $byte = $megabyte * 1048576;
-        return $byte;
-    }
+function megabyteToByte($megabyte)
+{
+    $byte = $megabyte * 1048576;
+    return $byte;
+}
 
     // Añadir mas metodos de conversion cuando sean necesarios
