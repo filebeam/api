@@ -2,9 +2,9 @@ RewriteEngine On
 
 # Añadir encabezados CORS para permitir acceso desde cualquier origen
 <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, DELETE"
-    Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    Header always Access-Control-Allow-Origin "*"
+    Header always Access-Control-Allow-Methods "GET, POST, OPTIONS, PUT, DELETE"
+    Header always Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
 </IfModule>
 
 # Manejar solicitudes OPTIONS (preflight)
