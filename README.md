@@ -32,7 +32,7 @@ FileBeam es un servicio que te permite compartir archivos facil y rapidamente a 
 Una lista de caracteristicas pendientes o planeadas a futuro sujeta a cambios
 
 - [ ] Subir desde URL
-- [ ] Subidas Temporales
+- [x] Subidas Temporales
 - [ ] Cliente para Android
 - [ ] Cliente para Linux/CLI
 
