@@ -46,4 +46,4 @@ Si deseaas reportar algun error, o tienes alguna sugerencia, puedes abrir un iss
 
 ## Licencia
 
-FileBeam es software de código abierto bajo la licencia [GNU GPL-v3.0](https://github.com/filebeam/api/blob/main/LICENSE).
+FileBeam es software de código abierto bajo la licencia [GNU AGPL-v3.0](https://github.com/filebeam/api/blob/main/LICENSE).
