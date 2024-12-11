@@ -4,9 +4,11 @@
 <a href="https://filebeam.xyz">
 <img src="https://filebeam.xyz/file/FH9IGy.png" height="80">
 </a>
-<br/>
+  <h3 align="center">
+        <code>@filebeam/api</code>
+    </h3>
 <p align="center">
-<strong>📝 Repositorio para la API de FileBeam</strong>
+<strong>📝 Repositorio de la API de FileBeam</strong>
 </p>
 <p>
 </p>
