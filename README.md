@@ -2,7 +2,7 @@
 
 <div align="center">
 <a href="https://filebeam.xyz">
-<img src="filebeam.png" height="80">
+<img src="https://filebeam.xyz/file/FH9IGy.png" height="80">
 </a>
 <br/>
 <p align="center">
