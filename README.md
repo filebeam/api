@@ -14,7 +14,7 @@
 </p>
   <div>
   <strong>
-  <a href="https://github.com/filebeam/web">Repositorio Principal</a> • 
+  <a href="https://github.com/filebeam/web">Repositorio del frontend</a> • 
   <a href="https://docs.filebeam.xyz">Ver la documentacion</a>
   </strong>
   <h6>
