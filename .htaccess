@@ -1,7 +1,0 @@
-RewriteEngine On
-
-# Añadir encabezados CORS para permitir acceso desde cualquier origen
-Header set Access-Control-Allow-Origin "*"
-
-RewriteCond %{REQUEST_URI}  !(\.png|\.jpg|\.webp|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js|\.pdf)$
-RewriteRule (.*) routes.php [QSA,L]
