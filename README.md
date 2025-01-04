@@ -37,6 +37,8 @@ Una lista de caracteristicas pendientes o planeadas a futuro sujeta a cambios
 - [x] Subidas Temporales
 - [ ] Cliente para Android
 - [ ] Cliente para Linux/CLI
+- [ ] Sistema de usuarios
+- [ ] Panel de administración
 
 ## Contribuir
 
