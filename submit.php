@@ -76,9 +76,9 @@ function submit($needSanitize, $time, $hash)
     }
 
     if ($_SERVER['SERVER_PORT'] != 443) {
-        $fileUrl = "http://$uri" . "file/" . $newFileName . "\n";
+        $fileUrl = "http://$uri". $newFileName . "\n";
     } else {
-        $fileUrl = "https://$uri" . "file/" . $newFileName . "\n";
+        $fileUrl = "https://$uri" . $newFileName . "\n";
     }
 
     echo $fileUrl;
