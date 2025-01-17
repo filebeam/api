@@ -1,3 +1,4 @@
+# ADVERTENCIA: ESTO NO FUNCIONA EN NGINX
 RewriteEngine On
 
 # Añadir encabezados CORS para permitir acceso desde cualquier origen
