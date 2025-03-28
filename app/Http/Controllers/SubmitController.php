@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Lib\RandomString;
-use Illuminate\Container\Attributes\Storage;
+use Illuminate\Support\Facades\Storage;
 
 class SubmitController extends Controller
 {
@@ -19,8 +19,18 @@ class SubmitController extends Controller
             $newFileName = $newFileName->randomize(6) . '.' . $fileExtension;
         }
 
-        
+        if ($request['needsSanitize']) { // Si el archivo requiere ser sanitizado
+            $file = $request->file('file');
+            $purifiedContent = file_get_contents($file->getPathname());
+            $purifiedContent = htmlspecialchars($purifiedContent, ENT_QUOTES | ENT_HTML5);
+            Storage::put('public/' . $newFileName, $purifiedContent);
+            $url = 'https://files.filebeam.xyz/' . $newFileName;
+            return response($url, 200);
+        }
 
-        
+        $request->file('file')->storeAs('public', $newFileName);
+        $url = 'https://files.filebeam.xyz/' . $newFileName;
+        return response($url, 200);
+
     }
 }

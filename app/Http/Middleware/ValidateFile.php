@@ -70,7 +70,7 @@ class ValidateFile
 
     private function needsSanitize($extension)
     {
-        $required = ['html', 'xhtml', 'php', 'phtml', 'cgi', 'xml', 'js'];
+        $required = ['html', 'xhtml', 'php', 'phtml', 'cgi', 'xml', 'js', 'json'];
         return in_array($extension, $required);
     }
 }
