@@ -2,7 +2,7 @@
 
 <div align="center">
 <a href="https://filebeam.xyz">
-<img src="https://filebeam.xyz/file/FH9IGy.png" height="80">
+<img src="https://files.filebeam.xyz/FH9IGy.png" height="80">
 </a>
   <h3 align="center">
         <code>@filebeam/api</code>
