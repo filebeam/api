@@ -12,8 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('announcements', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('timestamp', length: 255);
+            $table->string('title', length: 255);
+            $table->longText('content');
+            $table->string('img_url', length: 255);
         });
     }
 

@@ -12,8 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tmp_files', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->increments('id_file');
+            $table->string('file_name', length: 255);
+            $table->string('sent_time', length: 255);
+            $table->string('expire_time', length: 255);
         });
     }
 
