@@ -23,7 +23,43 @@
 
 ## Ejecutar de manera local
 
-Pendiente por redactar
+Para configurar rapidamente una version local de la API puedes seguir los siguientes pasos:
+
+### Requisitos Previos
+
+* **Algun editor de texto**
+* **PHP (version 8.2 o posterior)**
+* **Composer**
+* **Sentido Comun**
+
+### Instalacion
+
+1. Clona el repositorio en alguna ruta accesible
+   ```sh
+   git clone https://github.com/filebeam/api.git
+   ```
+2. Instala las dependencias con Composer
+   ```sh
+   composer install
+   ```
+3. Renombra el archivo .env.example a .env (Recuerda añadir los datos de la base de datos en el .env)
+   ```sh
+   cp .env.example .env
+   ```
+5. Genera una API Key:
+   ```sh
+   php artisan key:generate
+   ```
+   
+6. Ejecuta las migraciones
+   ```sh
+   php artisan migrate
+   ``` 
+7. Inicia el servidor de desarollo
+   ```sh
+   php artisan serve
+   ```
+
 
 # ¿Porque FileBeam?
 
