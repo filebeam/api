@@ -13,9 +13,10 @@ class FilesStatsController extends Controller
 
     try {
 
-    $total = count(scandir(Storage::path()));
-    
-    echo $total;
+    $files = Storage::disk('public')->files();
+    $count = count($files);
+
+    echo $count;
 
     } catch (Exception $e) {
 
