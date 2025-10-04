@@ -13,7 +13,7 @@ class FilesStatsController extends Controller
 
     try {
 
-    $total = count(scandir(Storage::path('public')));
+    $total = count(scandir(Storage::path()));
     
     echo $total;
 
