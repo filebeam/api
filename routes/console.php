@@ -1,8 +1,18 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schedule;
+use Illuminate\Support\Facades\Storage;
+use App\Lib\Time;
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote')->hourly();
+Schedule::call(function () {
+    //Llamada y velidación de expiración de archivos cada 5 segundos.
+
+    $timestamp = new Time();
+    $timestamp = $timestamp->getUnixTime();
+    $files = DB::select('select * from tmp_files where expire_time <= ?', [$timestamp]);
+    foreach ($files as $file) {
+        Storage::delete($file->file_name);
+        DB::delete('delete from tmp_files where id_file = ?', [$file->id_file]);
+    }
+})->everyTenSeconds();
