@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Lib\Time;
 
 Schedule::call(function () {
-    //Llamada y velidación de expiración de archivos cada 5 segundos.
+
+    # Llamada y validación de expiración de archivos cada 10 segundos.
 
     $timestamp = new Time();
     $timestamp = $timestamp->getUnixTime();
