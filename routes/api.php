@@ -9,6 +9,11 @@ use App\Http\Middleware\ValidateFile;
 use App\Http\Controllers\FilesStatsController;
 use App\Http\Middleware\GetFileStatsRequests;
 
+Route::options('{any}', function () {
+    return response()->json([], 204);
+})->where('any', '.*');
+
+
 Route::any('/', [SubmitController::class, 'submit'])->middleware(ValidateFile::class);
 
 Route::any('/anuncios', [AnnouncementsController::class, 'getContent'])->middleware(AnnouncementRequests::class);
