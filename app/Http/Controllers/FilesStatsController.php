@@ -19,7 +19,7 @@ class FilesStatsController extends Controller
 
     } catch (Exception $e) {
 
-        echo "0";
+        echo $e->getMessage();
     }
 
     }
