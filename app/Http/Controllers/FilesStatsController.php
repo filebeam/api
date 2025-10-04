@@ -12,8 +12,8 @@ class FilesStatsController extends Controller
     public function getFiles(Request $request){
 
     try {
-        
-    $total = count(scandir(storage_path()));
+
+    $total = count(scandir(storage_path('public')));
     
     echo $total;
     } catch (Exception $e) {
