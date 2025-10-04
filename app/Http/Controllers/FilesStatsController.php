@@ -18,7 +18,7 @@ class FilesStatsController extends Controller
     echo $total;
     } catch (Exception $e) {
 
-        echo "Oh no! Ha ocurrido un error: " . $e->getMessage();
+        echo "0";
     }
 
     }
