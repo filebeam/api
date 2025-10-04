@@ -18,7 +18,7 @@ class SubmitController extends Controller
         $newFileName = new RandomString();
         $newFileName = $newFileName->randomize(6) . '.' . $fileExtension;
 
-        while (file_exists(public_path('public') . '/' . $newFileName)) {
+        while (Storage::disk('public')->exists($newFileName)) {
             $newFileName = new RandomString();
             $newFileName = $newFileName->randomize(6) . '.' . $fileExtension;
         }
