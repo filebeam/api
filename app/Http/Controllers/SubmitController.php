@@ -11,7 +11,8 @@ use Symfony\Component\HttpKernel\Event\ResponseEvent;
 
 class SubmitController extends Controller
 {
-    public function submit(Request $request){
+    public function submit(Request $request)
+    {
 
         $fileExtension = $request->file('file')->getClientOriginalExtension();
         $newFileName = new RandomString();
@@ -45,41 +46,41 @@ class SubmitController extends Controller
                 # EN CASO DE QUE NO SE ENVÍE NINGUN PARÁMETRO DE TIEMPO (TIEMPO ILIMITADO)
                 # SUBIR LOGS
                 DB::table('file_logs')->insert([
-                'timestamp' => $timestamp,
-                'date_time' => $dateTime->getDateTime(),
-                'user_agent' => $request->userAgent(),
-                'ip_addr' => $request->ip(),
-                'file_name' => $newFileName,
-                'hash' => $fileHash
+                    'timestamp' => $timestamp,
+                    'date_time' => $dateTime->getDateTime(),
+                    'user_agent' => $request->userAgent(),
+                    'ip_addr' => $request->ip(),
+                    'file_name' => $newFileName,
+                    'hash' => $fileHash
                 ]);
                 break;
             case '5m':
                 # SUBIDA DE LOG
                 DB::table('file_logs')->insert([
-                'timestamp' => $timestamp,
-                'date_time' => $dateTime->getDateTime(),
-                'user_agent' => $request->userAgent(),
-                'ip_addr' => $request->ip(),
-                'file_name' => $newFileName,
-                'hash' => $fileHash
+                    'timestamp' => $timestamp,
+                    'date_time' => $dateTime->getDateTime(),
+                    'user_agent' => $request->userAgent(),
+                    'ip_addr' => $request->ip(),
+                    'file_name' => $newFileName,
+                    'hash' => $fileHash
                 ]);
 
                 # SUBIDA DE PARÁMETRO DE TIEMPO
                 DB::table('tmp_files')->insert([
-                    'file_name'=> $newFileName,
-                    'sent_time'=> $timestamp,
-                    'expire_time'=> $timestamp + 300,
+                    'file_name' => $newFileName,
+                    'sent_time' => $timestamp,
+                    'expire_time' => $timestamp + 300,
                 ]);
-            break;
+                break;
             case '30m':
                 # SUBIDA DE LOG
                 DB::table('file_logs')->insert([
-                'timestamp' => $timestamp,
-                'date_time' => $dateTime->getDateTime(),
-                'user_agent' => $request->userAgent(),
-                'ip_addr' => $request->ip(),
-                'file_name' => $newFileName,
-                'hash' => $fileHash
+                    'timestamp' => $timestamp,
+                    'date_time' => $dateTime->getDateTime(),
+                    'user_agent' => $request->userAgent(),
+                    'ip_addr' => $request->ip(),
+                    'file_name' => $newFileName,
+                    'hash' => $fileHash
                 ]);
 
                 # SUBIDA DE PARÁMETRO DE TIEMPO
@@ -89,17 +90,17 @@ class SubmitController extends Controller
                     'expire_time' => $timestamp + 1800,
                 ]);
 
-            break;
+                break;
             case '1h':
-                
+
                 # SUBIDA DE LOG
                 DB::table('file_logs')->insert([
-                'timestamp' => $timestamp,
-                'date_time' => $dateTime->getDateTime(),
-                'user_agent' => $request->userAgent(),
-                'ip_addr' => $request->ip(),
-                'file_name' => $newFileName,
-                'hash' => $fileHash
+                    'timestamp' => $timestamp,
+                    'date_time' => $dateTime->getDateTime(),
+                    'user_agent' => $request->userAgent(),
+                    'ip_addr' => $request->ip(),
+                    'file_name' => $newFileName,
+                    'hash' => $fileHash
                 ]);
 
                 # SUBIDA DE PARÁMETRO DE TIEMPO
@@ -108,18 +109,18 @@ class SubmitController extends Controller
                     'sent_time' => $timestamp,
                     'expire_time' => $timestamp + 3600,
                 ]);
-            
-            break;
+
+                break;
             case '6h':
-                
+
                 # SUBIDA DE LOG
                 DB::table('file_logs')->insert([
-                'timestamp' => $timestamp,
-                'date_time' => $dateTime->getDateTime(),
-                'user_agent' => $request->userAgent(),
-                'ip_addr' => $request->ip(),
-                'file_name' => $newFileName,
-                'hash' => $fileHash
+                    'timestamp' => $timestamp,
+                    'date_time' => $dateTime->getDateTime(),
+                    'user_agent' => $request->userAgent(),
+                    'ip_addr' => $request->ip(),
+                    'file_name' => $newFileName,
+                    'hash' => $fileHash
                 ]);
 
                 # SUBIDA DE PARÁMETRO DE TIEMPO
@@ -129,16 +130,16 @@ class SubmitController extends Controller
                     'expire_time' => $timestamp + 21600,
                 ]);
 
-            break;
+                break;
             case '12h':
                 # SUBIDA DE LOG
                 DB::table('file_logs')->insert([
-                'timestamp' => $timestamp,
-                'date_time' => $dateTime->getDateTime(),
-                'user_agent' => $request->userAgent(),
-                'ip_addr' => $request->ip(),
-                'file_name' => $newFileName,
-                'hash' => $fileHash
+                    'timestamp' => $timestamp,
+                    'date_time' => $dateTime->getDateTime(),
+                    'user_agent' => $request->userAgent(),
+                    'ip_addr' => $request->ip(),
+                    'file_name' => $newFileName,
+                    'hash' => $fileHash
                 ]);
 
                 # SUBIDA DE PARÁMETRO DE TIEMPO
@@ -147,16 +148,16 @@ class SubmitController extends Controller
                     'sent_time' => $timestamp,
                     'expire_time' => $timestamp + 43200,
                 ]);
-            break;
+                break;
             case '24h':
                 # SUBIDA DE LOG
                 DB::table('file_logs')->insert([
-                'timestamp' => $timestamp,
-                'date_time' => $dateTime->getDateTime(),
-                'user_agent' => $request->userAgent(),
-                'ip_addr' => $request->ip(),
-                'file_name' => $newFileName,
-                'hash' => $fileHash
+                    'timestamp' => $timestamp,
+                    'date_time' => $dateTime->getDateTime(),
+                    'user_agent' => $request->userAgent(),
+                    'ip_addr' => $request->ip(),
+                    'file_name' => $newFileName,
+                    'hash' => $fileHash
                 ]);
 
                 # SUBIDA DE PARÁMETRO DE TIEMPO
@@ -165,17 +166,16 @@ class SubmitController extends Controller
                     'sent_time' => $timestamp,
                     'expire_time' => $timestamp + 86400,
                 ]);
-            break;
+                break;
             default:
-            return response('Parámetro tiempo inválido. Subida cancelada.', 400);
+                return response('Parámetro tiempo inválido. Subida cancelada.', 400);
         }
 
         if (!$request->isSecure()) {
-        $url = 'http://' . env('APP_URI_BASE') . "/" . $newFileName;
-        return response($url, 200);
+            $url = 'http://' . env('APP_URI_BASE') . "/" . $newFileName;
+            return response($url, 200);
         }
         $url = 'https://' . env('APP_URI_BASE') . "/" . $newFileName;
         return response($url, 200);
-
     }
 }
