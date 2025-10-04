@@ -13,9 +13,10 @@ class FilesStatsController extends Controller
 
     try {
 
-    $total = count(scandir(storage_path('public')));
+    $total = count(scandir(env('FILES_PATH')));
     
     echo $total;
+
     } catch (Exception $e) {
 
         echo "0";
