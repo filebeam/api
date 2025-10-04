@@ -9,4 +9,4 @@ use App\Http\Middleware\ValidateFile;
 
 Route::any('/', [SubmitController::class, 'submit'])->middleware(ValidateFile::class);
 
-Route::any('/api/anuncios', [AnnouncementsController::class, 'getContent'])->middleware(AnnouncementRequests::class);
+Route::any('/anuncios', [AnnouncementsController::class, 'getContent'])->middleware(AnnouncementRequests::class);
