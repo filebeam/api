@@ -8,7 +8,8 @@ use Illuminate\Http\Middleware\HandleCors;
 return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         //
-        $middleware->append(HandleCors::class);
+            $middleware->appendToGroup('/', \Illuminate\Http\Middleware\HandleCors::class);
+
     })
     ->withRouting(
         web: __DIR__.'/../routes/web.php',
