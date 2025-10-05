@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['*', '/*'],   // o ['api/*'] según tus rutas
+    'paths' => ['*'], // o ['api/*'] si tu API está en /api
     'allowed_methods' => ['*'],
     'allowed_origins' => ['*'],
     'allowed_origins_patterns' => [],
