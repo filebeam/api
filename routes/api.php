@@ -20,4 +20,4 @@ Route::any('/anuncios', [AnnouncementsController::class, 'getContent'])->middlew
 
 Route::any('/totalFiles', [FilesStatsController::class, 'getFiles'])->middleware(GetFileStatsRequests::class);
 
-Route::any('/health', [HealthCheckController::class], 'response');
+Route::any('/health', [HealthCheckController::class, 'response']);
