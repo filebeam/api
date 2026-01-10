@@ -8,6 +8,7 @@ use App\Http\Middleware\AnnouncementRequests;
 use App\Http\Middleware\ValidateFile;
 use App\Http\Controllers\FilesStatsController;
 use App\Http\Middleware\GetFileStatsRequests;
+use App\Http\Controllers\HealthCheckController;
 
 Route::options('{any}', function () {
     return response()->noContent();
@@ -18,3 +19,5 @@ Route::any('/', [SubmitController::class, 'submit'])->middleware(ValidateFile::c
 Route::any('/anuncios', [AnnouncementsController::class, 'getContent'])->middleware(AnnouncementRequests::class);
 
 Route::any('/totalFiles', [FilesStatsController::class, 'getFiles'])->middleware(GetFileStatsRequests::class);
+
+Route::any('/health', [HealthCheckController::class], 'response');
