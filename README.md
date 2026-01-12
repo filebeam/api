@@ -27,39 +27,37 @@ Para configurar rapidamente una version local de la API puedes seguir los siguie
 
 ### Requisitos Previos
 
-* **Algun editor de texto**
-* **PHP (version 8.2 o posterior)**
-* **Composer**
-* **Sentido Comun**
+-   **Algun editor de texto**
+-   **PHP (version 8.2 o posterior)**
+-   **Composer**
+-   **Sentido Comun**
 
 ### Instalacion
 
 1. Clona el repositorio en alguna ruta accesible
-   ```sh
-   git clone https://github.com/filebeam/api.git
-   ```
+    ```sh
+    git clone https://github.com/filebeam/api.git
+    ```
 2. Instala las dependencias con Composer
-   ```sh
-   composer install
-   ```
+    ```sh
+    composer install
+    ```
 3. Renombra el archivo .env.example a .env (Recuerda añadir los datos de la base de datos en el .env)
-   ```sh
-   cp .env.example .env
-   ```
-5. Genera una API Key:
-   ```sh
-   php artisan key:generate
-   ```
-   
-6. Ejecuta las migraciones
-   ```sh
-   php artisan migrate
-   ``` 
-7. Inicia el servidor de desarollo
-   ```sh
-   php artisan serve
-   ```
-
+    ```sh
+    cp .env.example .env
+    ```
+4. Genera una API Key:
+    ```sh
+    php artisan key:generate
+    ```
+5. Ejecuta las migraciones
+    ```sh
+    php artisan migrate
+    ```
+6. Inicia el servidor de desarollo
+    ```sh
+    php artisan serve
+    ```
 
 # ¿Porque FileBeam?
 
@@ -69,12 +67,12 @@ FileBeam es un servicio que te permite compartir archivos facil y rapidamente a 
 
 Una lista de caracteristicas pendientes o planeadas a futuro sujeta a cambios
 
-- [ ] Subir desde URL
-- [x] Subidas Temporales
-- [ ] Cliente para Android
-- [ ] Cliente para Linux/CLI
-- [ ] Sistema de usuarios
-- [ ] Panel de administración
+-   [ ] Subir desde URL
+-   [x] Subidas Temporales
+-   [ ] Cliente para Android
+-   [ ] Cliente para Linux/CLI
+-   [ ] Sistema de usuarios
+-   [ ] Panel de administración
 
 ## Contribuir
 
@@ -82,7 +80,7 @@ Todas las contribuciones a este repositorio son bienvenidas, si deseas contribui
 
 Si deseaas reportar algun error, o tienes alguna sugerencia, puedes abrir un issue explicando a detalle tu reporte o sugerencia. Tambien puedes contribuir directamente al proyecto creando un fork de este repositorio y haciendo un pull request con tus cambios
 
-> *Tambien puedes apoyar este proyecto simplemente dandole una estrella a este repositorio si este te ha servido o lo consideras de utilidad* ✨
+> _Tambien puedes apoyar este proyecto simplemente dandole una estrella a este repositorio si este te ha servido o lo consideras de utilidad_ ✨
 
 ## Licencia
 
